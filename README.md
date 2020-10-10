@@ -1,2 +1,2 @@
 # energy-projection-anomaly
-An attempt to reproduce "Iterative energy-based projection on a normal data manifold for anomaly localization" in ICLR 2020.
+To reproduce "Iterative energy-based projection on a normal data manifold for anomaly localization"(https://openreview.net/forum?id=HJx81ySKwr)[paper] in ICLR 2020.
