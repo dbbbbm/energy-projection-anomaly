@@ -45,11 +45,3 @@ def get_dataloader(root, cl, dtype='train', bs=64, nw=2, img_size=64):
     dataloader = data.DataLoader(dset, bs, shuffle=train_flag,
                                  drop_last=train_flag, num_workers=nw, pin_memory=True)
     return dataloader
-
-
-if __name__ == '__main__':
-    root = '/media/user/disk/mvtec_ad/'
-    train_loader = get_dataloader(root, 0)
-
-    for(x, label) in train_loader:
-        print(x)

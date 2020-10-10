@@ -24,7 +24,7 @@ BATCH_SIZE = 64
 WORKERS = 4
 torch.backends.cudnn.benchmark = True
 IMG_SIZE = 256
-DATA_PATH = '../mvtec_anomaly/'
+DATA_PATH = '../mvtec_anomaly_detection/'
 CLASSES = ['bottle', 'cable', 'capsule', 'carpet', 'grid', 'hazelnut', 'leather',
            'metal_nut', 'pill', 'screw', 'tile', 'toothbrush', 'transistor', 'wood', 'zipper']
 # gray-scale: 4-grid 9-screw 14-zipper

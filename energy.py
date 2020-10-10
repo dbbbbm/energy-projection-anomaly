@@ -24,10 +24,10 @@ BATCH_SIZE = 64
 WORKERS = 4
 torch.backends.cudnn.benchmark = True
 IMG_SIZE = 256
-ITERS = 50
-ALPHA = 0.1
+ITERS = 100
+ALPHA = 0.05
 LR = 0.1
-DATA_PATH = '../mvtec_anomaly/'
+DATA_PATH = '../mvtec_anomaly_detection/'
 CLASSES = ['bottle', 'cable', 'capsule', 'carpet', 'grid', 'hazelnut', 'leather',
            'metal_nut', 'pill', 'screw', 'tile', 'toothbrush', 'transistor', 'wood', 'zipper']
 
@@ -63,7 +63,7 @@ def visualize(opt):
         pass
 
     for type_ in os.listdir(path):
-        for img_name in os.listdir(os.path.join(path, type_)):
+        for img_name in tqdm(os.listdir(os.path.join(path, type_))):
             img = Image.open(os.path.join(path, type_, img_name)).resize((IMG_SIZE, IMG_SIZE), resample=Image.BILINEAR)
             img = TF.to_tensor(img).unsqueeze(0)
             if img.size(1) == 1:
