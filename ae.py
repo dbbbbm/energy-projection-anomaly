@@ -31,7 +31,7 @@ CLASSES = ['bottle', 'cable', 'capsule', 'carpet', 'grid', 'hazelnut', 'leather'
 
 
 def train(opt):
-    model = models.SimpleAE(opt.ls, opt.mp, img_size=IMG_SIZE)
+    model = models.AE(opt.ls, opt.mp, img_size=IMG_SIZE)
     # model = models.Spatial2DAE()
     model.to(device)
     EPOCHS = 250
